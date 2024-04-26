@@ -1,4 +1,6 @@
+import { Suspense } from "react";
 import "./globals.css";
+import LoadingComponent from "@/components/LoadingComponent";
 
 
 export const metadata = {
@@ -10,7 +12,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="font-SFProDisplay">
-        {children}
+      <Suspense fallback={<LoadingComponent/>}>
+      {children}
+      </Suspense>
       </body>
     </html>
   );

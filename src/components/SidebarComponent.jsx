@@ -26,7 +26,7 @@ export default async function SidebarComponent({url}) {
         <div key={w?.workSpaceId} className="flex items-center mt-5 w-full">
           <div className="rounded-full w-4 h-4 bg-todo"></div>
           <div className="flex justify-between w-full pl-3">
-            <Link href={`${url}/${w?.workSpaceId}?sidebar=workspace`}>
+            <Link href={`${url}/${w?.workSpaceId}`}>
               <p className=" font-bold">{w?.workspaceName}</p>
             </Link>
             <EditDeleteDropDownComponent workSpaceId={w?.workSpaceId} />
